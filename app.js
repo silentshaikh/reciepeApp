@@ -19,7 +19,9 @@
             let creList = document.createElement("li");
             creList.innerHTML = `<h2 class="title">${element.title}</h2>  
             <p class="description">${element.description}</p> `;
-            creList.addEventListener("click",fetchDetail(element));
+            creList.addEventListener("click",() => {
+                fetchDetail(element)
+            });
             recipeList.appendChild(creList);
         });
     };
